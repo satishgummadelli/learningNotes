@@ -1,0 +1,13 @@
+#changing the root username and setting the password in MYSQL DB
+
+USE mysql;
+
+UPDATE user
+   SET user = 'admin'
+ WHERE user = 'root';
+
+UPDATE user
+   SET password = PASSWORD('admin')
+ WHERE user = 'admin';
+
+FLUSH PRIVILEGES;
